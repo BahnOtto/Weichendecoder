@@ -1,4 +1,4 @@
-
+// Copyright (c) 2025 BahnOtto
 
 #include "Arduino.h"
 #include <EEPROM.h>
@@ -12,7 +12,7 @@ const char Vers[] = "Weichen BR3 VSC 25ß706";
 NmraDcc Dcc;
 
 const byte servoDelay = 10; // 25
-const byte maxServo   = 8;    // needed number
+const byte maxServo   = 8;  // needed number
 
 unsigned long servoTime = millis() + servoDelay;
 
@@ -35,20 +35,20 @@ void setServoConfig() {
 	Servo[0].outputInverse = true;
 	Servo[0].servo.attach(A0);
 	Servo[0].minPos = 70;   //72
-	Servo[0].maxPos = 97;  //118
+	Servo[0].maxPos = 97;   //118
 
 	Servo[1].address = 94;  //WBR32
 	Servo[1].outputPin = 11;
 	Servo[1].outputInverse = true;
 	Servo[1].servo.attach(A1);
-	Servo[1].minPos = 65; //68
+	Servo[1].minPos = 65;   //68
 	Servo[1].maxPos = 112;
 
 	Servo[2].address = 95;	//WBR33 BW Nebenbahn
 	Servo[2].outputPin = 10;
 	Servo[2].outputInverse = true;
 	Servo[2].servo.attach(A2);
-	Servo[2].minPos = 70;  //85 Hauptstrecke
+	Servo[2].minPos = 70;   //85 Hauptstrecke
 	Servo[2].maxPos = 135;  //135
 
 	Servo[3].address = 96;  //WBR34 BWl
